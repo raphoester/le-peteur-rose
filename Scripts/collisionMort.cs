@@ -5,8 +5,8 @@ using UnityEngine;
 public class collisionMort : MonoBehaviour
 {
     public GameObject prout;
-    public float positionMortY = -5.11f;
-
+    public float positionMortY = -4.6f;
+    
     private void Update()
     {
         Vector3 nouvellePosition = new Vector3(prout.transform.position.x, positionMortY, 0);

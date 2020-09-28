@@ -12,6 +12,7 @@ public class deplacement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
+    
     void FixedUpdate()
     {
         transform.position += Vector3.right * vitesseLaterale * Time.deltaTime;
