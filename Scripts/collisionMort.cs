@@ -6,7 +6,10 @@ public class collisionMort : MonoBehaviour
 {
     public GameObject prout;
     public float positionMortY = -4.6f;
-    
+
+    public Sprite animationMort;
+
+    private SpriteRenderer sprite ;
     private void Update()
     {
         Vector3 nouvellePosition = new Vector3(prout.transform.position.x, positionMortY, 0);
@@ -18,6 +21,10 @@ public class collisionMort : MonoBehaviour
         if (collision.gameObject.name == "prout"){
             Debug.Log("Défaite !");
             prout.GetComponent<deplacement>().enabled = false;
+
+            sprite = prout.GetComponent<SpriteRenderer>();
+            sprite.sprite = animationMort;
+
         }
     }
 }
