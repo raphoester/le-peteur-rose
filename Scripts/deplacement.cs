@@ -24,7 +24,7 @@ public class deplacement : MonoBehaviour
     void FixedUpdate()
     {
         transform.position += Vector3.right * vitesseLaterale * Time.deltaTime;
-        if(Input.GetKey("space"))
+        if(Input.GetKeyDown("space"))
         {
             resultat = rnd.Next(1, prouts.Count);
             AS.clip = prouts[resultat];
